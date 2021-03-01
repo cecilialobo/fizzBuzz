@@ -1,18 +1,21 @@
 const fizzBuzz = (n) => {
     listOfIntegers = [];
     for (let i = 1; i <= n; i++) {
-        
+        let value = toString(i);
+
         if (i % 3 === 0) {
-            listOfIntegers.push('Fizz');
-        } 
+            value = 'Fizz';
+        }
+
         if (i % 5 === 0) {
-            listOfIntegers.push('Buzz');
+            value = 'Buzz';
         }
+        
         if (i % 3 === 0 && i % 5 === 0) {
-            listOfIntegers.push('FizzBuzz');
-        } else {
-            listOfIntegers.push(toString(i));
+            value = 'FizzBuzz';
         }
+
+        listOfIntegers.push(value);
     }
     return listOfIntegers;
 };
